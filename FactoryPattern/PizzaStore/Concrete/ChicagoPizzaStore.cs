@@ -5,7 +5,7 @@ namespace FactoryPattern.PizzaStore
 {
     internal class ChicagoPizzaStore : PizzaStore
     {
-        protected override Pizza createPizza(string item)
+        protected override Pizza CreatePizza(string item)
         {
             if (item.Equals("cheese"))
             {

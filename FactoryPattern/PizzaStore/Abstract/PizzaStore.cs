@@ -8,7 +8,7 @@ namespace FactoryPattern.PizzaStore
         {
             Pizza pizza;
 
-            pizza = createPizza(type);
+            pizza = CreatePizza(type);
 
             pizza.Prepare();
             pizza.Bake();
@@ -18,6 +18,6 @@ namespace FactoryPattern.PizzaStore
             return pizza;
         }
 
-        protected abstract Pizza createPizza(string type);
+        protected abstract Pizza CreatePizza(string type);
     }
 }

@@ -1,24 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using FactoryPattern.Ingredients.Abstract;
+
 namespace FactoryPattern.AbstractPizza
 {
     public abstract class Pizza
     {
-        public string name = string.Empty;
-        public string dough = string.Empty;
-        public string sauce = string.Empty;
-        public List<string> toppings = new List<string>();
+        public string Name { get; set; }
+        public Dough dough { get; set; }
+        public Sauce sauce { get; set; }
+        public Veggies[] veggies { get; set; }
+        public Cheese cheese { get; set; }
+        public Pepperoni pepperoni { get; set; }
+        public Clams clams { get; set; }
 
-        public void Prepare()
-        {
-            Console.WriteLine(string.Format("Preparing {0}", name));
-            Console.WriteLine("Tossing dough...");
-            Console.WriteLine("Adding sauce...");
-            Console.WriteLine("Adding toppings:");
-            foreach (var topping in toppings)
-            {
-                Console.WriteLine("     {0}", topping);
-            }
-        }
+
+        public abstract void Prepare();
 
         public virtual void Bake()
         {

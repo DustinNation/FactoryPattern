@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.Ingredients.Abstract
 {
-    internal abstract class Clams
+    public abstract class Clams
     {
         internal string Name;
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.Ingredients.Abstract
 {
-    internal abstract class Dough
+    public abstract class Dough
     {
         internal string Name;
     }

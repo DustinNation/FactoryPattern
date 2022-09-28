@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FactoryPattern.Ingredients.Abstract;
+using FactoryPattern.Ingredients.Interface;
 
 namespace FactoryPattern.Ingredients.Concrete
 {
@@ -10,32 +7,33 @@ namespace FactoryPattern.Ingredients.Concrete
     {
         public Cheese CreateCheese()
         {
-            throw new NotImplementedException();
+            return new ReggianoCheese();
         }
 
         public Clams CreateClams()
         {
-            throw new NotImplementedException();
+            return new FreshClams();
         }
 
         public Dough CreateDough()
         {
-            throw new NotImplementedException();
+            return new ThinCrustDough();
         }
 
         public Pepperoni CreatePepperoni()
         {
-            throw new NotImplementedException();
+            return new SlicedPepperoni();
         }
 
         public Sauce CreateSauce()
         {
-            throw new NotImplementedException();
+            return new MarinaraSauce();
         }
 
         public Veggies[] CreateVeggies()
         {
-            throw new NotImplementedException();
+            Veggies[] veggies = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
+            return veggies;
         }
     }
 }

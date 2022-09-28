@@ -1,8 +1,8 @@
 ﻿using FactoryPattern.Ingredients.Abstract;
 
-namespace FactoryPattern.Ingredients
+namespace FactoryPattern.Ingredients.Interface
 {
-    internal interface IPizzaIngredientFactory
+    public interface IPizzaIngredientFactory
     {
         public Dough CreateDough();
         public Sauce CreateSauce();
